@@ -1,0 +1,20 @@
+﻿<Window
+    Height="450"
+    Title="NewContactWindow"
+    Width="800"
+    mc:Ignorable="d"
+    x:Class="ContactsApp.NewContactWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ContactsApp"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBox Margin="0,0,0,5" x:Name="nameTextBox" />
+            <TextBox Margin="0,0,0,5" x:Name="emailTextBox" />
+            <TextBox Margin="0,0,0,5" x:Name="phoneTextBox" />
+            <Button Click="SaveButton_Click" Content="Save" />
+        </StackPanel>
+    </Grid>
+</Window>
