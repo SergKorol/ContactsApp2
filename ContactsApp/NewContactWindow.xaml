@@ -11,10 +11,21 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Grid>
         <StackPanel Margin="10">
+            <TextBlock Text="Name" />
             <TextBox Margin="0,0,0,5" x:Name="nameTextBox" />
+            <TextBlock Text="Email" />
             <TextBox Margin="0,0,0,5" x:Name="emailTextBox" />
+            <TextBlock Text="Phone" />
             <TextBox Margin="0,0,0,5" x:Name="phoneTextBox" />
             <Button Click="SaveButton_Click" Content="Save" />
+            <Button
+                Click="SaveButton_Click"
+                Content="Update"
+                Foreground="Gray" />
+            <Button
+                Background="Red"
+                Click="SaveButton_Click"
+                Content="Delete" />
         </StackPanel>
     </Grid>
 </Window>

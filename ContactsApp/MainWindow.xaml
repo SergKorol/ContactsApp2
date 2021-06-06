@@ -8,8 +8,28 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:ContactsApp"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uc="clr-namespace:ContactsApp.Controls"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <StackPanel>
-        <Button Click="NewButton_Click" Content="New contact" />
+        <Button
+            Click="NewButton_Click"
+            Content="New contact"
+            Margin="10" />
+        <TextBox Margin="0,5,5,0" TextChanged="TextBox_TextChanged" />
+        <ListView
+            Height="280"
+            SelectionChanged="ContactsListView_SelectedChanged"
+            x:Name="Contacts">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <uc:ContactControl Contact="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackPanel>
 </Window>
